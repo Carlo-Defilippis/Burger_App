@@ -1,38 +1,56 @@
-<h1>Burgers!</h1>
+<h1 class="text-center text-white">Burgers!</h1>
 
-<h2>Burger you ate!</h2>
 
-<ul>
+<div class="container bg-warning rounded-pill">
+  <div class="row">
+    <div class="col-6">
+<h2 class="text-center">Burger you ate!</h2>
+
+<ul class="text-center unstyled">
   {{#each cats}}
     {{#unless sleepy}}
       {{> cats/cat-block sleep=true}}
     {{/unless}}
   {{/each}}
 </ul>
+</div>
 
-<h2>Burgers you haven't eaten!</h2>
+<div class="col-6">
+<h2 class="text-center">Burgers you haven't eaten!</h2>
 
-<ul>
+<ul class="text-center unstyled">
   {{#each cats}}
     {{#if sleepy}}
       {{> cats/cat-block sleep=false}}
     {{/if}}
   {{/each}}
 </ul>
+    </div>
+  </div>
+</div>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+<div class="container">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-3">
+<h2 class="text-center text-white">Add a Burger</h2>
+<form class="create-form text-center">
 
-  <div class="form-group">
+  <div class="form-group text-center text-white">
     <label for="ca">Burger Name:</label>
     <input type="text" id="ca" name="name">
   </div>
-
-  <div class="form-group">
+</div>
+<div class="col-2 text-center text-white">
+  <div class="form-group text-center text-white">
     <label for="sleepy">Eat right away?</label><br>
     <input type="radio" name="sleepy" value="1" checked> Eat later!<br>
     <input type="radio" name="sleepy" value="0"> Eat now!
   </div>
 
-  <button type="submit">Add Burger</button>
+  <button class="btn-info rounded-pill text-center text-white border-right border-bottom" type="submit">Add Burger</button>
+  </div>
+    <div class="col-4"></div>
 </form>
+</div>
+</div>

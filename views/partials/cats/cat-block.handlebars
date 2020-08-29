@@ -1,9 +1,13 @@
+<div class="container">
+	<div class="row">
 <li>
 	{{name}}
 {{#if sleep}}{{else}}
-	<button class="change-sleep" data-id="{{id}}" data-newsleep="{{sleep}}">
+	<button class="change-sleep btn-success rounded-pill" data-id="{{id}}" data-newsleep="{{sleep}}">
 		EAT BURGER!!{{/if}}
 	</button>
 
-	<button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
+	<button class="delete-cat btn-danger rounded-pill" data-id="{{this.id}}">DELETE!</button>
 </li>
+	</div>
+</div>

@@ -29,19 +29,22 @@ $(function() {
       name: $("#ca").val().trim(),
       sleepy: $("[name=sleepy]:checked").val().trim()
     };
-
+if (newCat.name.length !== 0) {
     // Send the POST request.
     $.ajax("/api/cats", {
       type: "POST",
       data: newCat
     }).then(
       function() {
-        console.log("created new cat");
+        console.log("created new burger");
         // Reload the page to get the updated list
         location.reload();
       }
     );
-  });
+  } else {
+    alert("Please enter a name of the burger!");
+  }
+});
 
   $(".delete-cat").on("click", function(event) {
     var id = $(this).data("id");
@@ -51,7 +54,7 @@ $(function() {
       type: "DELETE"
     }).then(
       function() {
-        console.log("deleted cat", id);
+        console.log("deleted burger", id);
         // Reload the page to get the updated list
         location.reload();
       }
