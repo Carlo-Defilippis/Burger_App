@@ -70,10 +70,10 @@ var orm = {
       cb(result);
     });
   },
-  // An example of objColVals would be {name: panther, sleepy: true}
+  // An example of objColVals would be {name: burger, ate: true}
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
-
+    console.log(objColVals)
     queryString += " SET ";
     queryString += objToSql(objColVals);
     queryString += " WHERE ";
@@ -103,5 +103,5 @@ var orm = {
   }
 };
 
-// Export the orm object for the model (cat.js).
+// Export the orm object for the model (burgers.js).
 module.exports = orm;

@@ -8,8 +8,8 @@
 <h2 class="text-center">Burger you ate!</h2>
 
 <ul class="text-center unstyled">
-  {{#each cats}}
-    {{#unless sleepy}}
+  {{#each burgers}}
+    {{#unless ate}}
       {{> cats/cat-block sleep=true}}
     {{/unless}}
   {{/each}}
@@ -47,8 +47,8 @@
 <h2 class="text-center">Burgers you haven't eaten!</h2>
 
 <ul class="text-center unstyled">
-  {{#each cats}}
-    {{#if sleepy}}
+  {{#each burgers}}
+    {{#if ate}}
       {{> cats/cat-block sleep=false}}
     {{/if}}
   {{/each}}
@@ -75,8 +75,8 @@
 <div class="col-2 text-center text-white">
   <div class="form-group text-center text-white">
     <label for="sleepy">Eat right away?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Eat later!<br>
-    <input type="radio" name="sleepy" value="0"> Eat now!
+    <input type="radio" name="ate" value="1" checked> Eat later!<br>
+    <input type="radio" name="ate" value="0"> Eat now!
   </div>
 
   <button class="btn-info rounded-pill text-center text-white border-right border-bottom" type="submit">Add Burger</button>
