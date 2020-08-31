@@ -1,4 +1,7 @@
-USE u1poemg1ww6qbakf;
+### Schema
+
+CREATE DATABASE burgers_db;
+USE burgers_db;
 
 CREATE TABLE burgers
 (
