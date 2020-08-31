@@ -1,5 +1,5 @@
 {
-  "name": "11-burger",
+  "name": "Burger_App",
   "version": "1.0.0",
   "description": "This application will allow the user to make an order list. It's built in NodeJS with Express.",
   "main": "server.js",
