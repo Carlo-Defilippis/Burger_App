@@ -2,19 +2,19 @@
 $(function() {
   $(".change-ate").on("click", function(event) {
     var id = $(this).data("id");
-    var newBurger = $(this).data("newburger");
+    var newburger = $(this).data("newburger");
 
-    var newBurgerState = {
-      ate: newBurger
+    var newburgerState = {
+      ate: newburger
     };
 
     // Send the PUT request.
     $.ajax("/api/burger/" + id, {
       type: "PUT",
-      data: newBurgerState
+      data: newburgerState
     }).then(
       function() {
-        console.log("changed ate to", newBurger);
+        console.log("changed ate to", newburger);
         // Reload the page to get the updated list
         location.reload();
       }
@@ -25,15 +25,15 @@ $(function() {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
-    var newBurger = {
+    var newburger = {
       name: $("#ca").val().trim(),
       ate: $("[name=ate]:checked").val().trim()
     };
-if (newBurger.name.length !== 0) {
+if (newburger.name.length !== 0) {
     // Send the POST request.
     $.ajax("/api/burger", {
       type: "POST",
-      data: newBurger
+      data: newburger
     }).then(
       function() {
         console.log("created new burger");

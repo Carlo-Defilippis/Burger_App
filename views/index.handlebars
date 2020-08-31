@@ -10,7 +10,7 @@
 <ul class="text-center unstyled">
   {{#each burgers}}
     {{#unless ate}}
-      {{> cats/cat-block sleep=true}}
+      {{> burgers/burger-block ate=true}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -49,7 +49,7 @@
 <ul class="text-center unstyled">
   {{#each burgers}}
     {{#if ate}}
-      {{> cats/cat-block sleep=false}}
+      {{> burgers/burger-block ate=false}}
     {{/if}}
   {{/each}}
 </ul>
